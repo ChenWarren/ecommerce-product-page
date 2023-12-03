@@ -6,8 +6,7 @@ function App() {
 
   return (
     <>
-      <main className='md:container md:mx-auto'>
-        <h1 className='text-3xl font-bold'>Sneakers</h1>
+      <main className='md:container px-4 md:scroll-px-0.5 md:mx-auto'>
         <Header />
         <Product />
       </main>

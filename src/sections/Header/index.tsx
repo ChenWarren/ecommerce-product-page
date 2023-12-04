@@ -24,10 +24,8 @@ export default function Header() {
     <>
       {/* Mobile menu */}
       {isMobile && (
-        <div>
-          <div className={`bg-black/70 h-screen w-full fixed transition-all duration-300 ${mobileMenuOpen ? 'flex' : 'hidden'}`}>
-          </div>
-          <div className={`z-10 fixed h-full w-2/3 top-0 -left-full px-6 py-8 bg-white`} style={{left: "0", animation: mobileMenuOpen ? "slide-right 0.3s ease-in-out both" : "slide-left 0.3s ease-in-out both"}}>
+        <div className={`bg-black/70 h-screen w-full fixed transition-all duration-100 ${mobileMenuOpen ? 'righ-0' : '-right-full'}`}>
+          <div className={`z-10 fixed h-full w-2/3 top-0 px-6 py-8 bg-white transition-all delay-100 duration-300 ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
             <div onClick={() => setMobileMenuOpen(false)} className="mb-12">
               <img src="./icon-close.svg" alt="Close"/>
             </div>

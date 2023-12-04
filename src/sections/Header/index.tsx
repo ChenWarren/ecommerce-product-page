@@ -25,19 +25,19 @@ export default function Header() {
       {/* Mobile menu */}
       {isMobile && (
         <div className={`bg-black/70 h-screen w-full fixed transition-all duration-100 ${mobileMenuOpen ? 'righ-0' : '-right-full'}`}>
-          <div className={`z-10 fixed h-full w-2/3 top-0 px-6 py-8 bg-white transition-all delay-100 duration-300 ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
+          <div className={`z-10 fixed h-full w-2/3 top-0 px-7 py-7 bg-white transition-all delay-100 duration-300 ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
             <div onClick={() => setMobileMenuOpen(false)} className="mb-12">
               <img src="./icon-close.svg" alt="Close"/>
             </div>
             <ul>
-              {menu.map((item, index) => (
-                <li className="mb-6 text-lg font-bold" key={index}>{item}</li>
+              {menu.map((item) => (
+                <li className="mb-6 text-lg font-bold" key={item.id}><a href={item.link}>{item.name}</a></li>
               ))}
             </ul>
           </div>
         </div>
       )}
-      <header className="flex justify-between px-4 md:px-0 items-center py-6 md:py-12 md:border-b-[1px]">
+      <header className="flex justify-between py-5 md:py-0 px-5 md:px-0 items-center md:border-b-[1px]">
         <div className="flex">
           {/* Mobile menu toggle icon */}
           {isMobile && (
@@ -53,8 +53,8 @@ export default function Header() {
         {!isMobile && (
           <div className="flex justify-center">
             <ul className="flex gap-8">
-              {menu.map((item, index) => (
-                <li key={index}>{item}</li>
+              {menu.map((item) => (
+                <li className="py-10 border-b-4 border-transparent hover:border-orange transition-all duration-300 ease-in-out" key={item.id}><a href={item.link}>{item.name}</a></li>
               ))}
             </ul>
           </div>
@@ -73,10 +73,37 @@ export default function Header() {
 }
 
 // Menu item array
-export const menu: string[] = [
-  'Collections',
-  'Men',
-  'Women',
-  'About',
-  'Contact'
+export const menu: Menu[] = [
+  {
+    id: 1,
+    name:'Collections',
+    link: '#'
+  },
+  {
+    id: 2,
+    name: 'Men',
+    link: '#'
+  },
+  {
+    id: 3,
+    name: 'Women',
+    link: '#'
+  },
+  {
+    id: 4,
+    name: 'About',
+    link: '#'
+  },
+  {
+    id: 5,
+    name: 'Contact',
+    link: '#'
+  }
 ];
+
+// Menu item type
+type Menu = {
+  id: number;
+  name: string;
+  link: string; 
+}

@@ -4,6 +4,7 @@
 */
 
 import { useEffect, useState } from "react";
+import { menu } from "../../services/data";
 
 
 export default function Header() {
@@ -61,49 +62,13 @@ export default function Header() {
         )}
         <div className="flex items-center gap-6 md:gap-8 ">
           <div>
-            <img src="./icon-cart.svg" alt="Cart" />
+            <img className="w-[22px]" src="./icon-cart.svg" alt="Cart" />
           </div>
-          <div className="pe-2">
-            <img className="w-6 h-6 md:w-10 md:h-10" src="./image-avatar.png" alt="User avatar" />
+          <div className="rounded-full border-2 border-transparent hover:border-orange transition-all duration-300 ease-in-out">
+            <img className="w-6 h-6 md:w-12 md:h-12" src="./image-avatar.png" alt="User avatar" />
           </div>
         </div>
       </header>
     </>
   )
-}
-
-// Menu item array
-export const menu: Menu[] = [
-  {
-    id: 1,
-    name:'Collections',
-    link: '#'
-  },
-  {
-    id: 2,
-    name: 'Men',
-    link: '#'
-  },
-  {
-    id: 3,
-    name: 'Women',
-    link: '#'
-  },
-  {
-    id: 4,
-    name: 'About',
-    link: '#'
-  },
-  {
-    id: 5,
-    name: 'Contact',
-    link: '#'
-  }
-];
-
-// Menu item type
-type Menu = {
-  id: number;
-  name: string;
-  link: string; 
 }

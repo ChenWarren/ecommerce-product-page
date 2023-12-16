@@ -5,6 +5,7 @@
 
 import { useEffect, useState } from "react";
 import { menu } from "../../services/data";
+import Cart from "../../components/Cart";
 
 
 export default function Header() {
@@ -66,7 +67,7 @@ export default function Header() {
           <div onClick={() => setCartOpen(!cartOpen)}>
             <img className="w-[22px]" src="./icon-cart.svg" alt="Cart" />
             {/* Cart */}
-            {cartOpen && <Cart     />}
+            {cartOpen && <Cart cartItems={[]}   />}
           </div>
           <div className="rounded-full border-2 border-transparent hover:border-orange transition-all duration-300 ease-in-out">
             <img className="w-6 h-6 md:w-12 md:h-12" src="./image-avatar.png" alt="User avatar" />
@@ -78,13 +79,3 @@ export default function Header() {
 }
 
 
-function Cart({}) {
-  return (
-    <>
-      <div className="absolute top-20 w-[360px] py-6 transform -translate-x-1/2 min-h-[260px] h-100 bg-white rounded-lg shadow-xl">
-        <p className="w-100 px-6 pb-6 border-b-[1px]">Cart</p>
-      </div>
-    </>
-  );
-}
-  

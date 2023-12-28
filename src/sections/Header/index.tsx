@@ -66,13 +66,13 @@ export default function Header() {
           {/* Cart icon */}
           <div onClick={() => setCartOpen(!cartOpen)}>
             <img className="w-[22px]" src="./icon-cart.svg" alt="Cart" />
-            {/* Cart */}
-            {cartOpen && <Cart cartItems={[]}   />}
           </div>
           <div className="rounded-full border-2 border-transparent hover:border-orange transition-all duration-300 ease-in-out">
             <img className="w-6 h-6 md:w-12 md:h-12" src="./image-avatar.png" alt="User avatar" />
           </div>
         </div>
+        {/* Cart */}
+        {cartOpen && <Cart cartItems={[]}   />}
       </header>
     </>
   )

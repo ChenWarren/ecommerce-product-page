@@ -35,8 +35,8 @@ export const menu: Menu[] = [
 export const produt: Product = 
 {
   id: 'p-1',
-  name: '',
-  description: '',
+  title: 'Fall Limited Edition Sneakers',
+  description: 'These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they\'ll withstand everything the waether can offer.',
   price: 250.00,
   salePrice: 125.00,
   featuredImage: './image-product-1.jpg',

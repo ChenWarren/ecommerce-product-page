@@ -1,4 +1,5 @@
 
+import { CartItem } from "../types/Cart";
 import { Menu } from "../types/Menu";
 import { Product } from "../types/Product";
 
@@ -32,7 +33,7 @@ export const menu: Menu[] = [
 ];
 
 // Product data
-export const produt: Product = 
+export const product: Product = 
 {
   id: 'p-1',
   title: 'Fall Limited Edition Sneakers',
@@ -49,4 +50,18 @@ export const produt: Product =
       thumbNail: './image-product-1-thumbnail.jpg'
     }
   ]
+}
+
+// Testing cart item data
+export const cartItem: CartItem[] = [
+  {
+    id: "c-1",
+    productId: "p-1",
+    quantity: 1
+  }
+]
+
+// Get product data by ID
+export const getProductById = (id: string) => {
+  return product.id === id ? product : null;
 }

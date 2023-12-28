@@ -13,7 +13,7 @@ export default function Cart({cartItems}:{cartItems: CartItem[]}) {
             ):(
               cartItems.map((item) => (
                 <div>
-                  <p>{item.title}</p> 
+                  <p>{item.productId}</p> 
                 </div>
               ))
             )}
